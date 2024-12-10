@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #1D7373;  /* Новый общий фон страницы */
+    color: #e0e0e0;       /* Светлый текст для контраста */
+}
+
+/* Заголовок */
+header {
+    text-align: center;
+    background: #144f4f;  /* Тёмный оттенок для заголовка */
+    color: #fff;
+    padding: 20px 0;
+}
+
+/* Профиль */
+.profile {
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Контейнер для фото */
+.profile-img-container {
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    margin-bottom: 15px; /* Расстояние между фото и кнопкой */
+}
+
+img {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Collapsible block */
+.collapsible {
+    background-color: #144f4f;  /* Тёмный фон для кнопки */
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    width: 80%;
+    margin: 10px auto;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.collapsible:hover {
+    background-color: #103c3c;
+}
+
+.content {
+    display: none;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+    background-color: #185c5c; /* Оттенок для раскрывающегося блока */
+    border-radius: 5px;
+}
+
+/* Навыки */
+.skills {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.skillbar {
+    margin: 10px 0;
+}
+
+.skillbar p {
+    margin: 0 0 5px;
+}
+
+.bar {
+    background: #1A4D4D; /* Темный фон для прогресс-бара */
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+    border: 1px solid #ddd; /* Светлая рамка для контраста */
+}
+
+.fill {
+    height: 100%;
+    background: #fff; /* Белый цвет заполнения */
+    width: 0;
+    border-radius: 5px;
+    transition: width 1s ease; /* Плавная анимация заполнения */
+}
+
+/* Анимация для заполнения skillbar */
+.fill.python { width: 50%; }
+.fill.html { width: 40%; }
+.fill.css { width: 30%; }
+.fill.js { width: 20%; }
+
+/* Время и события */
+.timeline {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.event {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.date {
+    background: #144f4f;  /* Тёмный фон для даты */
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.description {
+    background: #185c5c;  /* Фон для описания события */
+    padding: 5px 10px;
+    border-radius: 5px;
+    flex-grow: 1;
+}
+
+/* Контакты */
+.contacts {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.contacts a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+.contacts a:hover {
+    text-decoration: underline;
+    color: #b3b3b3;
+}
+
+/* Мои проекты на GitHub */
+.github-link-container {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.github-link {
+    font-size: 18px;
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+.github-link:hover {
+    text-decoration: underline;
+}
+
+.github-link i {
+    margin-right: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #144f4f;
+    color: #fff;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 600px) {
+    .timeline .event {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .collapsible, .content {
+        width: 90%;
+    }
+
+    .projects a {
+        font-size: 1.2rem;
+    }
+
+    .github-link-container {
+        padding: 10px;
+    }
+}
